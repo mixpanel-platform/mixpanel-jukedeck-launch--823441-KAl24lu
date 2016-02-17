@@ -154,6 +154,7 @@
         
         
         /* Get top events */
+        var testStartofWeek = moment().startOf('week');
         events = [];
         MP.api.topEvents().done(function(results) {
           _.each(_.values(results.values()), function(value){
