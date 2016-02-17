@@ -152,7 +152,7 @@
 
     <script>
         
-        //MP.api.setCredentials('802636634bb7c18bc2c0dd98ac537072','a60273cdfb3c62ff4ea232b6908499b9')
+        
         /* Get top events */
         events = [];
         MP.api.topEvents().done(function(results) {
@@ -231,7 +231,7 @@
             $('.date-time').text(time);
             $('.date-pm').text(ampm);
             var pageViewParams = {limit: 25, type:'unique', unit:'minute', from: moment(), to: moment()}
-            var pageViewQuery = MP.api.segment('Page View', 'Url', pageViewParams)
+            var pageViewQuery = MP.api.segment('UPDATE TRACK CURRENT TIME_Player_Click_Music', 'Mood', pageViewParams)
             pageViewQuery.done(function(results){
                 var data = {}
                 _.each(_.keys(results.values()), function(key){
