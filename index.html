@@ -112,7 +112,7 @@
                   <div class="col-lg-12">
                      <div class="panel panel-default">
                         <div class="panel-heading text-center">
-                           Mood Trends -- What "Moods" are user selecting the most when updating songs?
+                           Real-Time Article Count -- How many articles have been read in the last 30 seconds?
                         </div>
                         <div class="panel-body">
                          <div id="datatable1_wrapper" class="dataTables_wrapper form-inline no-footer">
@@ -231,7 +231,7 @@
             $('.date-day').text(day.toString());
             $('.date-time').text(time);
             $('.date-pm').text(ampm);
-            var pageViewParams = {limit: 25, type:'unique', unit:'day', from: moment().subtract(7, 'days'), to: moment()}
+            var pageViewParams = {limit: 25, type:'unique', unit:'minute', from: moment(), to: moment()}
             var pageViewQuery = MP.api.segment('UPDATE TRACK CURRENT TIME_Player_Click_Music', 'Mood', pageViewParams)
             pageViewQuery.done(function(results){
                 var data = {}
