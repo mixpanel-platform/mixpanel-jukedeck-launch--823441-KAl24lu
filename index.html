@@ -231,7 +231,7 @@
             $('.date-day').text(day.toString());
             $('.date-time').text(time);
             $('.date-pm').text(ampm);
-            var pageViewParams = {limit: 25, type:'unique', unit:'week', from: moment(), to: moment().subtract(1, 'week')}
+            var pageViewParams = {limit: 25, type:'unique', unit:'minute', from: moment(), to: moment().subtract(1, 'week')}
             var pageViewQuery = MP.api.segment('UPDATE TRACK CURRENT TIME_Player_Click_Music', 'Mood', pageViewParams)
             pageViewQuery.done(function(results){
                 var data = {}
