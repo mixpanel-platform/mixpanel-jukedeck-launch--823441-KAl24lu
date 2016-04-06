@@ -21,6 +21,7 @@
     -->
     <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.4/css/simple-line-icons.min.css">
 
 
   </head>
@@ -234,7 +235,6 @@
             var pageViewParams = {limit: 25, type:'general', unit:'week', from: moment().subtract(7, 'days'), to: moment()}
             var pageViewQuery = MP.api.segment('UPDATE TRACK CURRENT TIME_Player_Click_Music', 'Mood', pageViewParams)
             pageViewQuery.done(function(results){
-                console.log(results)
                 var data = {}
                 _.each(_.keys(results.values()), function(key){
                     /* sum over data in value of results.values()[key] */
